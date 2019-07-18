@@ -12,7 +12,7 @@ body {
     color: #fff;
 }
 
-.container {
+.wrapper {
     position: relative;
     widht: 90%;
     display: grid;
@@ -21,7 +21,7 @@ body {
     grid-gap: 0 80px;
 }
 
-.container .box {
+.wrapper .box {
     position: relative;
     height: 400px;
     background: #060c21;
@@ -31,7 +31,7 @@ body {
 
 }
 
-.container .box:before {
+.wrapper .box:before {
     content: '';
     background: #fff;
     position: absolute;
@@ -45,7 +45,7 @@ body {
     z-index: -1;
 }
 
-.container .box:after {
+.wrapper .box:after {
     content: '';
     background: rgba(255, 255, 255, 0.05);
     width: 50%;
@@ -56,19 +56,19 @@ body {
     bottom: 0;
 }
 
-.container .box:nth-child(1):before {
+.wrapper .box:nth-child(1):before {
     background: linear-gradient(315deg, #ff0057, #e64a19);
 }
 
-.container .box:nth-child(2):before {
+.wrapper .box:nth-child(2):before {
     background: linear-gradient(315deg, #89ff00, #00bcd4);
 }
 
-.container .box:nth-child(3):before {
+.wrapper .box:nth-child(3):before {
     background: linear-gradient(315deg, #e91e63, #5d02ff);
 }
 
-.container .box:nth-child(4):before {
+.wrapper .box:nth-child(4):before {
     background: linear-gradient(315deg, #ff0000, #ffc107);
 }
 
@@ -121,6 +121,7 @@ body {
     opcaity: 0;
     color: #fff;
     font-size: 14px;
+    z-index: 10;
 }
 
 .box:hover .content a {
@@ -129,7 +130,18 @@ body {
     opcaity: 1;
 }
 
-.box .content a:hover {
-    background: #fff;
-    color: #000;
+.box:nth-child(1) .content a:hover {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.box:nth-child(2) .content a:hover {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.box:nth-child(3) .content a:hover {
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.box:nth-child(4) .content a:hover {
+    background: linear-gradient(315deg, #ff0000, #ffc107);
 }
