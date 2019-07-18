@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060c21;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    widht: 90%;
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-rows: auto;
+    grid-gap: 0 80px;
+}
+
+.container .box {
+    position: relative;
+    height: 400px;
+    background: #060c21;
+    display: flex;
+    justify-contnet: center;
+    align-items: center;
+
+}
+
+.container .box:before {
+    content: '';
+    background: #fff;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom -2px;
+    left: -2px;
+    transform: skew(2deg, 2deg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.container .box:after {
+    content: '';
+    background: rgba(255, 255, 255, 0.05);
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container .box:nth-child(1):before {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.container .box:nth-child(2):before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container .box:nth-child(3):before {
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.container .box:nth-child(4):before {
+    background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.content {
+    position: relative;
+    padding: 20px;
+}
+
+.content h2 {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.090);
+    transition: .25s;
+}
+
+.box:hover .content h2 {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.box .content h3 {
+    font-weight: 500;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+}
+
+.box .content p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.box .content a {
+    text-decoration: none;
+    position: absolute;
+    bottom: -50px;
+    margin: 0px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    transition: 0.25s;
+    transform: translateY(-40px);
+    visibility: hidden;
+    opcaity: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.box:hover .content a {
+    transform: translateY(-5px);
+    visibility: visible;
+    opcaity: 1;
+}
+
+.box .content a:hover {
+    background: #fff;
+    color: #000;
+}
